@@ -3,7 +3,7 @@ Hi there, I'm Yahya Zamindar! 👋
 
 I'm currently a Healthcare Administration student with a passion for data science. My journey is a blend of healthcare knowledge and data-driven decision-making, aiming to bridge the gap between these two worlds.
 I believe in the power of data to transform healthcare, making it more efficient, accessible, and personalized.
-Continuously learning and exploring Python, R, SQL, and various data visualization tools to bring data-driven insights into healthcare.
+Continuously learning and exploring Python, SQL, and various data visualization tools to bring data-driven insights into healthcare.
 🔭 Current Projects:
 
 Working on projects that analyze healthcare datasets to uncover trends, predict outcomes, and improve healthcare services.
