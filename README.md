@@ -1,39 +1,48 @@
+### Hi, I'm Yahya Zamindar 👋
 
-### Hi there, I'm Yahya Zamindar! 👋
+I'm doing an **MSc in Global Operations at HKUST** in Hong Kong, after a **BSc in Business Administration (Operations & Supply Chain Management) at Cal State Long Beach**. I've worked on warehouse floors, in clinics and on deal teams, and I like turning operations problems into tools and simulations people can actually use.
 
-🎓 **About Me:**
-
-I'm currently an **Information Systems student** with a passion for data science and analytics. My journey combines technical expertise and problem-solving to extract actionable insights from data.
-
-I believe in the power of technology and data to drive innovation, improve decision-making, and solve real-world challenges.
-
-Continuously learning and exploring **Python**, **SQL**, and various data visualization tools to leverage the potential of data in diverse industries.
+Right now I'm most interested in the **AI hardware supply chain**: the memory, chip packaging, power and materials every AI data center depends on, and what happens when one of them breaks.
 
 ---
 
-🔭 **Current Projects:**
+### 🛠️ Things I've built
 
-- Working on projects that analyze datasets to uncover trends, improve efficiency, and drive decision-making.
-- Collaborating with peers on building machine learning models and optimizing data processes for better insights.
+**[Keep It Walking](https://yzymbiote.github.io/keep-it-walking)**: a browser game about the AI supply chain. A robot walks across the screen, and its body *is* the supply chain: chips are its brain, memory its memory, transformers its heart. Real 2026 supply shocks (the Qatar helium outage, the HBM squeeze, the Texas grid freeze) hurt the matching body part, and you have 52 weeks to keep it walking without overspending. Every smart call unlocks a real supply chain concept, and there's a shared top-5 scoreboard.
+`JavaScript` `Cloudflare Workers` `D1`
 
----
+**[Air Cargo Terminal Bottleneck Finder](https://github.com/yzymbiote/air-cargo-bottleneck-finder)**: simulates shipments moving through a 4-stage export cargo terminal against flight cutoffs, finds the bottleneck, and tests every way to spend a budget of extra staff or equipment. In the default scenario, a mixed fix cuts modeled missed cutoffs from 13.1% to 2.4%, versus 11.5% from fixing only the bottleneck.
+`JavaScript` `Simulation` `Capacity planning`
 
-🌱 **I’m Currently Learning:**
+**[B2B/B2C Order & Shipping Database](https://github.com/yzymbiote/TerpBuy-SQL-Project)**: a SQL database tracking 5,000+ orders, with queries that flag regions with recurring late deliveries and surface top sellers and buying patterns.
+`SQL` `MySQL`
 
-- Advanced data analytics techniques and machine learning models tailored to business needs.
-- Exploring database management systems and cloud computing for scalable solutions.
-
----
-
-💡 **I’m Looking To Collaborate On:**
-
-- Projects focused on data analysis, visualization, and predictive modeling.
-- Initiatives that use technology and data to solve business problems and improve efficiency.
+**[Cinematic Data Insights](https://github.com/yzymbiote/Cinematic-Data-Insights-A-Python-Exploration-of-Movie-Metrics)**: movie industry analysis in Python, from budgets and ratings to genre and profit trends.
+`Python` `Pandas`
 
 ---
 
-📫 **How to Reach Me:**
+### 🏭 Where I've worked
 
-- Feel free to connect with me on [LinkedIn](https://linkedin.com/in/yahyazamindar)
-- Drop me an email at **yahyazamindar7@gmail.com** for collaborations or just to say hi!
+- **Essendant**, Supply Chain Operations Intern: redesigned outbound package consolidation, raising warehouse throughput 44% (73 to 106 cartons/hr).
+- **Scholars Ink Co.**, Deal Strategy & Operations Intern: screened 100+ manufacturers for investors, judging them on operational-improvement potential.
+- **Vellora Health Medical Group**, Business Operations Analyst Intern: led cost-reduction work across 3 clinics and fixed a records process affecting ~800 patients.
 
+---
+
+### 🌱 What I'm working on next
+
+- A ripple-effect tracker for the AI hardware supply chain: when one supplier stumbles, who feels it next?
+
+---
+
+### 🧰 Tools
+
+Python · SQL · R · JavaScript · Excel · Power BI · Tableau · Lean Six Sigma (Yellow Belt)
+
+---
+
+### 📫 Get in touch
+
+- [LinkedIn](https://linkedin.com/in/yahyazamindar)
+- yahyazamindar7@gmail.com
