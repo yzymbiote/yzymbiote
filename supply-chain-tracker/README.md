@@ -1,14 +1,11 @@
-# Manifest: Hong Kong supply chain careers tracker
+# Manifest: Hong Kong supply chain programmes for 2027 graduates
 
-A single-page tracker for supply chain, logistics, shipping, sourcing and procurement programmes in Hong Kong, modelled on application trackers like The Trackr.
+A tracker of real graduate, management trainee and entry-level supply chain programmes in Hong Kong, modelled on application trackers like The Trackr. Listings were checked on 24 Nov 2026.
 
-- **Tabs:** summer internships, graduate & management trainee programmes, off-cycle internships
-- **Non-local eligibility:** each programme is marked "Open to all", "Right to work needed" or "Not stated", and you can filter on it
-- **Right to work explainer:** IANG, the Top Talent Pass Scheme and the Working Holiday Scheme, which let non-locals work without employer sponsorship
-- **Table:** company, programme, open/close dates, live status, language expectations (English / Cantonese / Mandarin), documents, assessment stages, careers link
-- **Filters:** search, status, eligibility, language ("English only", "No Cantonese needed"), sector, hide closed; sortable columns
-- **My progress:** per-programme status saved in the browser's localStorage
+- **Tabs:** programmes open now, and 2027-intake programmes that have closed (watch these for the 2028 cycle)
+- **Language tag:** English only (confirmed), English required with Chinese a plus, not stated, or Chinese required. Roles that require Chinese are hidden by default.
+- **Each row:** deadline, live status (calculated from today's date), a short note on fit and requirements, a link to the source listing, and your own progress (saved in the browser's localStorage)
 
-Open `index.html` in a browser; there's no build step. To add or update a programme, edit the `DATA` array near the bottom of the file.
+Open `index.html` in a browser; there's no build step. To add a programme, add a row to the `DATA` array near the bottom of the file.
 
-Dates are estimates based on previous recruiting cycles, and the eligibility and language fields reflect what these programmes have typically asked for. Check each employer's careers page and immd.gov.hk before relying on them. Status is calculated against the `TODAY` constant; change it to `new Date()` to use the real current date.
+Deadlines and language requirements come from employer careers pages where possible, otherwise from job boards and university career sites. Confirm on the listing before applying.

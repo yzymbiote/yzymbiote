@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
-/* Layout: a shipping-manifest ledger for Hong Kong. Sticky header band, programme tabs, a visa explainer, one dense table. */
+/* Layout: a shipping-manifest ledger of real Hong Kong listings. Sticky header band, open/closed tabs, one dense table. */
 :root{
   --bg:#eef1f4; --panel:#ffffff; --ink:#0f1b2b; --muted:#5b6878; --line:#d6dde5; --line-soft:#e7ecf1;
   --accent:#1d4ed8; --accent-ink:#ffffff; --accent-soft:#e3eaff; --band:#0f1b2b; --band-ink:#e8eef6;
@@ -47,20 +47,6 @@ h1{font-family:var(--f-display);font-weight:800;font-size:clamp(26px,4vw,38px);l
 h2{font-family:var(--f-display);font-weight:700;font-size:16px;margin:0}
 .intro p{margin:0;color:var(--muted);max-width:70ch}
 
-.visa{margin-top:18px;background:var(--panel);border:1px solid var(--line);border-radius:8px}
-.visa summary{cursor:pointer;padding:12px 16px;display:flex;gap:10px;align-items:center;list-style:none}
-.visa summary::-webkit-details-marker{display:none}
-.visa summary::after{content:"Show";margin-left:auto;font:500 12px var(--f-mono);color:var(--accent)}
-.visa[open] summary::after{content:"Hide"}
-.visa summary span{color:var(--muted);font-size:13px}
-.routes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);border-top:1px solid var(--line)}
-.route{background:var(--panel);padding:14px 16px;display:grid;gap:6px;align-content:start}
-.route .code{font:500 11px var(--f-mono);letter-spacing:.08em;color:var(--accent);text-transform:uppercase}
-.route b{font-weight:600}
-.route p{margin:0;color:var(--muted);font-size:13px}
-.visa .foot{padding:10px 16px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
-.visa a{color:var(--accent)}
-@media (max-width:760px){.routes{grid-template-columns:minmax(0,1fr)}}
 
 .types{display:flex;border-bottom:1px solid var(--line);margin-top:22px;overflow-x:auto}
 .types button{font:600 14px var(--f-body);background:none;border:0;border-bottom:3px solid transparent;color:var(--muted);padding:10px 14px;cursor:pointer;white-space:nowrap;display:flex;gap:8px;align-items:center}
@@ -85,7 +71,7 @@ h2{font-family:var(--f-display);font-weight:700;font-size:16px;margin:0}
 .note i{font-style:normal;font-family:var(--f-mono);color:var(--soon)}
 
 .tablebox{margin-top:12px;background:var(--panel);border:1px solid var(--line);border-radius:8px;overflow-x:auto}
-table{border-collapse:collapse;width:100%;min-width:1240px}
+table{border-collapse:collapse;width:100%;min-width:1180px}
 th{position:sticky;top:0;background:var(--panel);text-align:left;font:500 11px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding:10px 12px;border-bottom:1px solid var(--line);white-space:nowrap}
 th button{all:unset;cursor:pointer}
 th button:hover{color:var(--ink)}
@@ -122,6 +108,14 @@ tr.is-closed td{color:var(--muted)}
 .track[data-v="rejected"]{border-color:var(--warn);background:var(--warn-bg)}
 .empty{padding:40px 16px;text-align:center;color:var(--muted)}
 footer{padding-block:28px 40px;color:var(--muted);font-size:12px;display:grid;gap:4px}
+.fit{font-size:12px;color:var(--muted);max-width:300px;min-width:220px}
+.l-en{color:var(--open);background:var(--open-bg)}
+.l-pref{color:var(--roll);background:var(--roll-bg)}
+.l-unk{color:var(--closed);background:var(--closed-bg)}
+.l-zh{color:var(--warn);background:var(--warn-bg)}
+.src{font:400 11px var(--f-mono);color:var(--muted);display:block;margin-top:2px}
+.tip{margin-top:18px;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:12px 16px;display:grid;gap:4px;font-size:13px;color:var(--muted)}
+.tip b{color:var(--ink);font-weight:600}
 </style>
 </head>
 <body>
@@ -132,219 +126,180 @@ footer{padding-block:28px 40px;color:var(--muted);font-size:12px;display:grid;ga
       <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><rect x="1" y="6" width="24" height="15" rx="2" fill="#1d4ed8"/><path d="M6 9v9M10 9v9M14 9v9M18 9v9" stroke="#e8eef6" stroke-width="1.6"/><rect x="1" y="3" width="24" height="3" rx="1" fill="#f3b75b"/></svg>
       Manifest <small>Supply chain careers</small>
     </div>
-    <span class="place">HONG KONG · HKG</span>
+    <span class="place">HONG KONG · CLASS OF 2027</span>
   </div>
 </header>
 
 <main class="wrap">
   <section class="intro">
-    <span class="eyebrow">2027 intake · updated 24 Nov 2026</span>
-    <h1 id="headline">Hong Kong supply chain summer internships</h1>
-    <p>Supply chain, logistics, shipping, sourcing and procurement programmes based in Hong Kong. Each one shows whether non-local applicants can apply, which languages it expects, and what the application involves.</p>
+    <span class="eyebrow">Real listings · checked 24 Nov 2026</span>
+    <h1 id="headline">Hong Kong supply chain programmes for 2027 graduates</h1>
+    <p>Graduate, management trainee and entry-level programmes in logistics, shipping, aviation cargo and supply chain. Each one is sourced from the employer or a job board and tagged by language requirement, so you can skip roles that need Cantonese or Mandarin.</p>
   </section>
 
-  <details class="visa" id="visa" open>
-    <summary><h2>No sponsor? You may not need one</h2><span>Three ways non-locals get the right to work in Hong Kong</span></summary>
-    <div class="routes">
-      <div class="route"><span class="code">IANG</span><b>You study at a Hong Kong university</b><p>Non-local graduates of full-time degree programmes in Hong Kong can stay and work after graduating without an employer sponsoring them. While you study, you can also do summer internships.</p></div>
-      <div class="route"><span class="code">TTPS · Category C</span><b>You graduated from a top-ranked university</b><p>The Top Talent Pass Scheme gives graduates of listed top universities (within the last 5 years) a visa to look for work in Hong Kong. You don't need a job offer first.</p></div>
-      <div class="route"><span class="code">Working Holiday</span><b>You're 18–30 from a partner country</b><p>Hong Kong has working holiday agreements with countries including the UK, Ireland, Australia, New Zealand, Canada, Japan and Korea. It suits a summer internship or a first year of work.</p></div>
-    </div>
-    <div class="foot">Roles marked <b>Right to work needed</b> are usually open to you if you hold one of these. Rules and quotas change, so check the current terms at immd.gov.hk.</div>
-  </details>
+  <div class="tip"><b>Missed a deadline? You can apply next cycle.</b><span>Swire, Cathay and similar schemes accept graduates for up to two years after they finish. If you graduate in 2027, you can still apply to the 2028 intake, which usually opens in September and closes in October or November 2027.</span></div>
 
-  <nav class="types" id="types" aria-label="Programme type"></nav>
+  <nav class="types" id="types" aria-label="Listing status"></nav>
 
   <section class="stats" aria-label="Summary">
     <div class="stat open"><b id="st-open">0</b><span>Open now</span></div>
     <div class="stat warn"><b id="st-closing">0</b><span>Closing in 14 days</span></div>
-    <div class="stat intl"><b id="st-intl">0</b><span>Open to all nationalities</span></div>
+    <div class="stat intl"><b id="st-en">0</b><span>English only (confirmed)</span></div>
     <div class="stat mine"><b id="st-mine">0</b><span>My applications</span></div>
   </section>
 
   <section class="controls" aria-label="Filters">
     <input id="q" type="search" placeholder="Search company or programme" aria-label="Search">
-    <select id="f-status" aria-label="Status">
-      <option value="">All statuses</option><option value="open">Open</option><option value="closing">Closing soon</option>
-      <option value="rolling">Rolling</option><option value="notyet">Not open yet</option><option value="closed">Closed</option>
-    </select>
-    <select id="f-visa" aria-label="Non-local eligibility">
-      <option value="">Any eligibility</option><option value="all">Open to all nationalities</option>
-      <option value="rtw">Right to work needed</option><option value="check">Not stated</option>
-    </select>
     <select id="f-lang" aria-label="Language">
-      <option value="">Any language</option><option value="en">English only</option><option value="noCanto">No Cantonese needed</option>
+      <option value="">Any language result</option><option value="en">English only (confirmed)</option>
+      <option value="pref">English required, Chinese a plus</option><option value="unk">Not stated</option>
     </select>
-    <select id="f-sector" aria-label="Sector"><option value="">All sectors</option></select>
-    <label class="chk"><input id="f-hide" type="checkbox"> Hide closed</label>
+    <label class="chk"><input id="f-zh" type="checkbox"> Show roles that require Chinese</label>
   </section>
 
-  <p class="note"><i>!</i><span>Dates are estimated from each employer's last recruiting cycle, and eligibility and language entries reflect what these programmes have typically asked for. Confirm both on the employer's careers page before you apply.</span></p>
+  <p class="note"><i>!</i><span>Deadlines and language requirements come from each employer's careers page where possible, otherwise from job boards and university career sites. "Not stated" means no source said either way. Check the listing before you apply.</span></p>
 
   <div class="tablebox">
     <table>
       <thead><tr>
-        <th>Ref</th>
         <th><button data-sort="co">Company<span class="arr"></span></button></th>
         <th><button data-sort="prog">Programme<span class="arr"></span></button></th>
-        <th><button data-sort="open">Opens<span class="arr"></span></button></th>
-        <th><button data-sort="close">Closes<span class="arr"></span></button></th>
+        <th><button data-sort="close">Deadline<span class="arr"></span></button></th>
         <th><button data-sort="status">Status<span class="arr"></span></button></th>
-        <th><button data-sort="visa">Non-locals<span class="arr"></span></button></th>
-        <th>Language</th><th>Documents</th><th>Assessments</th>
-        <th>Apply</th><th>My progress</th>
+        <th><button data-sort="lang">Language<span class="arr"></span></button></th>
+        <th>What to know</th>
+        <th>Listing</th><th>My progress</th>
       </tr></thead>
       <tbody id="rows"></tbody>
     </table>
-    <div class="empty" id="empty" hidden>No programmes match these filters. Clear the search or switch tabs.</div>
+    <div class="empty" id="empty" hidden>No programmes match. Try "Show roles that require Chinese" or the other tab.</div>
   </div>
 
   <footer>
     <span>Your progress is saved in this browser only.</span>
-    <span>Missing a programme? Add a row to the DATA array at the bottom of this page.</span>
+    <span>To add a programme, add a row to the DATA array at the bottom of this page.</span>
   </footer>
 </main>
 
 <script>
-/* ---------- Programme data (Hong Kong) ----------
- t: intern | grad | offcycle      open/close: YYYY-MM-DD, close may be "rolling"
- visa: all = open to all nationalities, rtw = must already have right to work in HK, check = not stated
- lang: E English, C Cantonese, M Mandarin      cl: cover letter required */
+/* ---------- Real listings, checked 24 Nov 2026 ----------
+ close: YYYY-MM-DD, or null when no deadline was published
+ lang: en = English only confirmed · pref = English required, Chinese preferred · unk = not stated · zh = Chinese required */
 const DATA = [
- // Summer internships
- {co:"Swire Pacific",prog:"Summer Internship – Supply Chain & Logistics",t:"intern",sector:"Conglomerate",open:"2026-11-03",close:"2027-01-11",visa:"all",lang:"E",cl:1,tests:["Online test","Video interview"],url:"https://www.swire.com/en/careers"},
- {co:"Jardine Matheson",prog:"Jardine Summer Internship",t:"intern",sector:"Conglomerate",open:"2026-11-10",close:"2027-01-18",visa:"all",lang:"E",cl:1,tests:["Online test","Video interview","Assessment day"],url:"https://www.jardines.com/en/careers"},
- {co:"DFI Retail Group",prog:"Summer Internship – Supply Chain",t:"intern",sector:"Retail",open:"2026-12-01",close:"2027-02-15",visa:"rtw",lang:"ECM",cl:0,tests:["Interviews"],url:"https://www.dfiretailgroup.com/careers"},
- {co:"A.S. Watson Group",prog:"Summer Internship – Supply Chain",t:"intern",sector:"Retail",open:"2026-12-15",close:"2027-03-01",visa:"rtw",lang:"ECM",cl:0,tests:["Interviews"],url:"https://www.aswatson.com/careers"},
- {co:"Maersk",prog:"Summer Internship – Ocean & Logistics",t:"intern",sector:"Shipping",open:"2026-12-01",close:"2027-02-28",visa:"check",lang:"E",cl:1,tests:["Online test","Interview"],url:"https://www.maersk.com/careers"},
- {co:"OOCL",prog:"Summer Internship Programme",t:"intern",sector:"Shipping",open:"2026-12-08",close:"2027-02-20",visa:"rtw",lang:"EC",cl:0,tests:["Interviews"],url:"https://www.oocl.com/eng/careers"},
- {co:"Kuehne+Nagel",prog:"Summer Internship – Sea & Air Logistics",t:"intern",sector:"Freight forwarding",open:"2027-01-05",close:"2027-03-15",visa:"check",lang:"EM",cl:1,tests:["Interview"],url:"https://jobs.kuehne-nagel.com"},
- {co:"DHL",prog:"Summer Internship – Supply Chain APAC",t:"intern",sector:"Freight forwarding",open:"2027-01-05",close:"2027-03-15",visa:"check",lang:"E",cl:0,tests:["Interview"],url:"https://careers.dhl.com"},
- {co:"Cathay Cargo",prog:"Summer Internship – Cargo",t:"intern",sector:"Aviation",open:"2026-12-01",close:"2027-01-31",visa:"rtw",lang:"EC",cl:0,tests:["Online test","Interview"],url:"https://careers.cathaypacific.com"},
- {co:"Li & Fung",prog:"Supply Chain Internship",t:"intern",sector:"Sourcing",open:"2026-12-01",close:"2027-02-28",visa:"check",lang:"EM",cl:1,tests:["Interview"],url:"https://www.lifung.com/careers"},
- {co:"adidas",prog:"Global Operations Internship – Sourcing",t:"intern",sector:"Sourcing",open:"2026-11-17",close:"rolling",visa:"check",lang:"E",cl:1,tests:["Interviews"],url:"https://careers.adidas-group.com"},
- {co:"Unilever",prog:"UFLP Internship – Supply Chain",t:"intern",sector:"FMCG",open:"2026-10-15",close:"2026-12-31",visa:"rtw",lang:"EC",cl:0,tests:["Gamified test","Video interview"],url:"https://careers.unilever.com"},
- {co:"L'Oréal",prog:"Summer Internship – Operations",t:"intern",sector:"FMCG",open:"2027-01-12",close:"2027-03-15",visa:"rtw",lang:"EC",cl:0,tests:["Video interview","Interview"],url:"https://careers.loreal.com"},
- {co:"MTR Corporation",prog:"Summer Internship – Procurement",t:"intern",sector:"Infrastructure",open:"2027-01-05",close:"2027-02-15",visa:"rtw",lang:"EC",cl:0,tests:["Interview"],url:"https://www.mtr.com.hk/en/corporate/careers"},
- {co:"Hutchison Ports HIT",prog:"Summer Internship – Port Operations",t:"intern",sector:"Shipping",open:"2027-01-12",close:"2027-03-01",visa:"check",lang:"EC",cl:0,tests:["Interview"],url:"https://www.hit.com.hk"},
- // Graduate / management trainee programmes
- {co:"Swire Pacific",prog:"Management Trainee Programme",t:"grad",sector:"Conglomerate",open:"2026-09-01",close:"2026-11-30",visa:"all",lang:"E",cl:1,tests:["Online test","Interviews","Assessment centre"],url:"https://www.swire.com/en/careers"},
- {co:"Jardine Matheson",prog:"Jardine Executive Programme",t:"grad",sector:"Conglomerate",open:"2026-09-01",close:"2026-11-02",visa:"all",lang:"E",cl:1,tests:["Online test","Video interview","Assessment centre"],url:"https://www.jardines.com/en/careers"},
- {co:"Maersk",prog:"Maersk International Shipping Education (MISE)",t:"grad",sector:"Shipping",open:"2026-10-01",close:"2027-01-15",visa:"all",lang:"E",cl:1,tests:["Online test","Video interview","Assessment centre"],url:"https://www.maersk.com/careers"},
- {co:"Swire Coca-Cola HK",prog:"Management Trainee – Supply Chain",t:"grad",sector:"FMCG",open:"2026-10-06",close:"2026-12-07",visa:"rtw",lang:"EC",cl:0,tests:["Online test","Assessment day"],url:"https://www.swirecocacola.com"},
- {co:"DFI Retail Group",prog:"Management Trainee – Supply Chain",t:"grad",sector:"Retail",open:"2026-09-15",close:"2026-12-15",visa:"rtw",lang:"ECM",cl:0,tests:["Online test","Group exercise","Interviews"],url:"https://www.dfiretailgroup.com/careers"},
- {co:"A.S. Watson Group",prog:"Management Trainee – Supply Chain",t:"grad",sector:"Retail",open:"2026-10-02",close:"2026-12-31",visa:"rtw",lang:"ECM",cl:0,tests:["Online test","Assessment centre"],url:"https://www.aswatson.com/careers"},
- {co:"OOCL",prog:"Management Trainee Programme",t:"grad",sector:"Shipping",open:"2026-09-22",close:"2026-11-28",visa:"rtw",lang:"ECM",cl:0,tests:["Online test","Interviews"],url:"https://www.oocl.com/eng/careers"},
- {co:"Cathay Pacific",prog:"Management Trainee – Cargo & Operations",t:"grad",sector:"Aviation",open:"2026-10-01",close:"2026-12-31",visa:"rtw",lang:"EC",cl:1,tests:["Online test","Group exercise","Interviews"],url:"https://careers.cathaypacific.com"},
- {co:"Hactl",prog:"Management Trainee Programme",t:"grad",sector:"Aviation",open:"2026-11-02",close:"2027-01-15",visa:"rtw",lang:"EC",cl:0,tests:["Interviews"],url:"https://www.hactl.com"},
- {co:"Airport Authority HK",prog:"Graduate Trainee – Airport Operations",t:"grad",sector:"Aviation",open:"2026-10-13",close:"2026-11-24",visa:"rtw",lang:"EC",cl:0,tests:["Online test","Interviews"],url:"https://www.hongkongairport.com/en/about-us/careers"},
- {co:"Kerry Logistics",prog:"Graduate Trainee Programme",t:"grad",sector:"Freight forwarding",open:"2026-11-02",close:"2027-01-31",visa:"rtw",lang:"ECM",cl:0,tests:["Interviews"],url:"https://www.kerrylogistics.com/careers"},
- {co:"DHL Express",prog:"Management Trainee Programme",t:"grad",sector:"Freight forwarding",open:"2026-10-20",close:"2026-12-20",visa:"rtw",lang:"EC",cl:0,tests:["Online test","Interviews"],url:"https://careers.dhl.com"},
- {co:"Hutchison Ports HIT",prog:"Management Trainee – Terminal Operations",t:"grad",sector:"Shipping",open:"2026-10-06",close:"2026-12-06",visa:"check",lang:"EC",cl:0,tests:["Interviews"],url:"https://www.hit.com.hk"},
- {co:"CLP Power",prog:"Graduate Trainee – Procurement & Supply",t:"grad",sector:"Infrastructure",open:"2026-09-29",close:"2026-11-09",visa:"rtw",lang:"EC",cl:0,tests:["Online test","Assessment centre"],url:"https://www.clp.com.hk/en/careers"},
- {co:"MTR Corporation",prog:"Graduate Trainee – Procurement",t:"grad",sector:"Infrastructure",open:"2026-09-15",close:"2026-11-15",visa:"rtw",lang:"EC",cl:0,tests:["Online test","Interviews"],url:"https://www.mtr.com.hk/en/corporate/careers"},
- {co:"Jebsen Group",prog:"Management Trainee Programme",t:"grad",sector:"Distribution",open:"2026-10-15",close:"2026-12-15",visa:"check",lang:"ECM",cl:1,tests:["Interviews","Assessment day"],url:"https://www.jebsen.com/careers"},
- {co:"Dah Chong Hong",prog:"Management Trainee – Logistics",t:"grad",sector:"Distribution",open:"2026-10-20",close:"2026-12-31",visa:"rtw",lang:"ECM",cl:0,tests:["Interviews"],url:"https://www.dch.com.hk"},
- {co:"Vitasoy",prog:"Management Trainee – Supply Chain",t:"grad",sector:"FMCG",open:"2026-11-02",close:"2027-01-10",visa:"rtw",lang:"ECM",cl:0,tests:["Interviews"],url:"https://www.vitasoy.com"},
- {co:"Maxim's Caterers",prog:"Management Trainee – Supply Chain",t:"grad",sector:"F&B",open:"2026-10-06",close:"rolling",visa:"rtw",lang:"ECM",cl:0,tests:["Interviews"],url:"https://www.maxims.com.hk"},
- {co:"TAL Apparel",prog:"Management Trainee – Operations",t:"grad",sector:"Sourcing",open:"2026-10-01",close:"rolling",visa:"check",lang:"EM",cl:1,tests:["Online test","Interviews"],url:"https://www.talapparel.com"},
- {co:"Unilever",prog:"Future Leaders Programme – Supply Chain",t:"grad",sector:"FMCG",open:"2026-09-15",close:"2026-12-01",visa:"rtw",lang:"EC",cl:0,tests:["Gamified test","Video interview","Assessment centre"],url:"https://careers.unilever.com"},
- // Off-cycle / year-round
- {co:"Lalamove",prog:"Operations Intern (part-time, year-round)",t:"offcycle",sector:"Delivery tech",open:"2026-09-01",close:"rolling",visa:"check",lang:"EC",cl:0,tests:["Interview"],url:"https://www.lalamove.com/careers"},
- {co:"Kuehne+Nagel",prog:"Off-cycle Intern – Contract Logistics",t:"offcycle",sector:"Freight forwarding",open:"2026-10-01",close:"rolling",visa:"check",lang:"E",cl:1,tests:["Interview"],url:"https://jobs.kuehne-nagel.com"},
- {co:"adidas",prog:"Sourcing Intern – 6 months",t:"offcycle",sector:"Sourcing",open:"2026-10-15",close:"rolling",visa:"check",lang:"E",cl:1,tests:["Interviews"],url:"https://careers.adidas-group.com"},
- {co:"Nike",prog:"Sourcing & Manufacturing Intern",t:"offcycle",sector:"Sourcing",open:"2026-11-01",close:"rolling",visa:"check",lang:"E",cl:0,tests:["Interviews"],url:"https://careers.nike.com"},
- {co:"PVH",prog:"Global Supply Chain Intern",t:"offcycle",sector:"Sourcing",open:"2026-11-15",close:"rolling",visa:"check",lang:"E",cl:1,tests:["Interview"],url:"https://careers.pvh.com"},
- {co:"SF Express HK",prog:"Operations Trainee (year-round)",t:"offcycle",sector:"Delivery tech",open:"2026-09-01",close:"rolling",visa:"rtw",lang:"EC",cl:0,tests:["Interview"],url:"https://www.sf-express.com/hk/en"},
+ {co:"Airport Authority HK",sector:"Aviation",prog:"Management Trainee Programme",kind:"3-yr MT · starts Jul 2027",close:"2026-11-30",lang:"unk",
+  note:"Rotations through airport departments. Final-year students of any discipline and graduates with under 3 years' experience can apply.",
+  url:"https://www.hongkongairport.com/en/careers/programmes/management-trainee.page",src:"hongkongairport.com"},
+ {co:"DHL Global Forwarding",sector:"Freight forwarding",prog:"Management Trainee Program 2027",kind:"3-yr MT · starts Jul 2027",close:"2026-12-06",lang:"zh",
+  note:"Supply chain management rotation. Listings ask for good spoken and written English and Chinese, plus willingness to relocate to Mainland China.",
+  url:"https://careers.dhl.com/global/en/job/DPDHGLOBALAV390905ENGLOBALEXTERNAL/Management-Trainee-Program-2027",src:"careers.dhl.com"},
+ {co:"OOCL",sector:"Shipping",prog:"Management Trainee 2027",kind:"3-yr MT · starts mid-2027",close:"2026-12-31",lang:"unk",
+  note:"Container shipping line. Job rotations and fast-track development. OOCL says it welcomes candidates from all backgrounds; language rules aren't published.",
+  url:"https://www.oocl.com/eng/aboutoocl/ooclcareer/careersatoocl/Documents/Career/index.aspx",src:"oocl.com"},
+ {co:"Lalamove",sector:"Delivery tech",prog:"Global Trainee Program 2027",kind:"Rotational · multi-market",close:"2026-12-31",lang:"pref",
+  note:"Logistics operations across up to 18 markets. English and analytical skills required, Chinese highly preferred. You must be willing to relocate between markets.",
+  url:"https://www.lalamove.com/global-trainee-program",src:"lalamove.com"},
+ {co:"MUJI Hong Kong",sector:"Retail",prog:"Management Trainee Program 2027",kind:"18-month MT · starts late Jul 2027",close:"2026-12-31",lang:"unk",
+  note:"Retail operations rather than pure supply chain: frontline to head office rotation. Online assessment in Jan 2027, offers in Apr 2027.",
+  url:"https://osa-career.hksyu.edu/2026/11/03/muji-hong-kong-recruitment-talk/",src:"HKSYU careers"},
+ {co:"BNP Paribas",sector:"Banking",prog:"2027 APAC Graduate Programme – Transaction Banking, Supply Chain Management",kind:"2-yr grad · Jan/Apr/Jul 2027",close:null,lang:"en",
+  note:"Supply chain finance, not operations. Fluent English required; other languages a plus. Minimum GPA 3.3/4.0. No deadline published, so apply soon.",
+  url:"https://group.bnpparibas/en/careers/job-offer/2027-apac-graduate-programme-transaction-banking-supply-chain-management-hong-kong",src:"group.bnpparibas"},
+ {co:"SF Supply Chain",sector:"Logistics",prog:"Elite Management Trainee Program / Logistics Coordinator (fresh grads)",kind:"2-yr MT or entry-level",close:null,lang:"unk",
+  note:"Contract logistics in Tsing Yi. Also hiring Control Tower Officers. No 2027 deadline published; check the open listings.",
+  url:"https://hk.jobsdb.com/companies/sf-supply-chain-171089088278968/graduates",src:"JobsDB"},
+ {co:"DKSH",sector:"Distribution",prog:"Management Trainee Program – Supply Chain stream",kind:"18-month MT · starts Jul",close:null,lang:"zh",
+  note:"Requires fluent English, Cantonese and Mandarin. Applications usually close in March.",
+  url:"https://www.dksh.com/hk-en/home/careers/workplace-locations/hong-kong/management-trainee-program",src:"dksh.com"},
+ // Closed for the 2027 intake. Watch these for the 2028 cycle.
+ {co:"Swire",sector:"Conglomerate",prog:"Swire Management Programme 2027",kind:"MT · starts Aug 2027",close:"2026-10-31",lang:"en",
+  note:"English is the only language requirement, and Swire says non-Chinese speakers are welcome. Starting salary HK$32,300 a month. Opens again around September 2027.",
+  url:"https://careers.swire.com/en/careers/swire-management-programme",src:"careers.swire.com"},
+ {co:"Cathay Pacific",sector:"Aviation",prog:"2027 Cargo Graduate Trainee Programme",kind:"Grad · starts Aug 2027",close:"2026-11-15",lang:"en",
+  note:"Hong Kong streams require excellent English only. Open to graduates within 2 years of graduating, so you can apply to the 2028 intake. There's also a Supply Chain & Asset Management stream.",
+  url:"https://careers.cathaypacific.com/en/careers/our-teams/early-careers-students-and-graduates/graduate-trainee",src:"careers.cathaypacific.com"},
+ {co:"MTR Corporation",sector:"Infrastructure",prog:"Procurement & Supply Chain Associate (2027 intake)",kind:"Grad programme",close:"2026-10-27",lang:"unk",
+  note:"For supply chain, procurement and business graduates. Applications ran 15 Sep to 27 Oct 2026. Leave your email on MTR's page to hear when the next cycle opens.",
+  url:"https://www.mtr.com.hk/graduate-development-programme/index.php",src:"mtr.com.hk"},
+ {co:"HAECO",sector:"Aviation",prog:"Group Graduate Trainee Programme 2027",kind:"Grad · rotational",close:"2026-11-15",lang:"unk",
+  note:"Aircraft maintenance (MRO) group. No dedicated supply chain track found.",
+  url:"https://careers.haeco.com/job/Airport-area-HAECO-Group-Graduate-Trainee-Programme-2027-(Hong-Kong)/1366966666/",src:"careers.haeco.com"},
+ {co:"HKTVmall",sector:"E-commerce",prog:"Management Trainee 2027",kind:"24-month MT · HK$32,000/mo",close:"2026-10-31",lang:"unk",
+  note:"Cross-functional rotations. No confirmed supply chain stream.",
+  url:"https://hktvcareers.com/programmes/",src:"hktvcareers.com"},
+ {co:"Swire Coca-Cola HK",sector:"FMCG",prog:"Graduate Trainee Program (Supply Chain stream)",kind:"3-yr GT",close:"2026-04-30",lang:"unk",
+  note:"Supply chain is one of four rotation streams. This cycle closed in April, much earlier than most, so watch for the next intake from early 2027.",
+  url:"https://www.hk.swirecocacola.com/people/en/talent-development/scchk-trainee-program/",src:"hk.swirecocacola.com"},
 ];
 
-const TYPES={intern:"Summer internships",grad:"Graduate & MT programmes",offcycle:"Off-cycle internships"};
-const VISA={all:["Open to all","v-all",0],rtw:["Right to work needed","v-rtw",1],check:["Not stated","v-check",2]};
-const LANGS={E:"English",C:"Cantonese",M:"Mandarin"};
-const PROGRESS=[["","Not applied"],["applied","Applied"],["test","Online test"],["interview","Interview"],["ac","Assessment centre"],["offer","Offer"],["rejected","Rejected"]];
+const TABS={open:"Open now",closed:"Closed: reapply next cycle"};
+const LANG={en:["English only","l-en",0],pref:["English · Chinese a plus","l-pref",1],unk:["Not stated","l-unk",2],zh:["Chinese required","l-zh",3]};
+const PROGRESS=[["","Not applied"],["watch","Watching"],["applied","Applied"],["test","Online test"],["interview","Interview"],["ac","Assessment centre"],["offer","Offer"],["rejected","Rejected"]];
 const LOGO=["#1d4ed8","#0f7a45","#9a3412","#6d28d9","#0e7490","#b42318","#334155","#a16207"];
-const TODAY=new Date("2026-11-24T00:00:00");
 const DAY=864e5;
+const TODAY=(()=>{const d=new Date();d.setHours(0,0,0,0);return d})();
 
-DATA.forEach((d,i)=>{d.id="HK-"+String(1001+i);});
+DATA.forEach(d=>{d.id=(d.co+"|"+d.prog).replace(/\W+/g,"-").toLowerCase();});
 
 const store={get(k,f){try{const v=localStorage.getItem(k);return v==null?f:JSON.parse(v)}catch(e){return f}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
-let progress=store.get("manifest.hk.progress",{});
-let state=Object.assign({t:"intern",sort:"close",dir:1},store.get("manifest.hk.view",{}));
-if(TYPES[location.hash.slice(1)])state.t=location.hash.slice(1);
+let progress=store.get("manifest.hk27.progress",{});
+let state=Object.assign({t:"open",sort:"close",dir:1},store.get("manifest.hk27.view",{}));
+if(TABS[location.hash.slice(1)])state.t=location.hash.slice(1);
 
 const fmt=s=>new Date(s+"T00:00:00").toLocaleDateString("en-GB",{day:"numeric",month:"short",year:"numeric"});
 function status(d){
-  const o=new Date(d.open+"T00:00:00");
-  if(o>TODAY){const n=Math.ceil((o-TODAY)/DAY);return {k:"notyet",label:n<=30?`Opens in ${n}d`:"Not open yet",rank:3};}
-  if(d.close==="rolling")return {k:"rolling",label:"Rolling",rank:1};
-  const c=new Date(d.close+"T00:00:00"), n=Math.round((c-TODAY)/DAY);
-  if(n<0)return {k:"closed",label:"Closed",rank:4};
-  if(n<=14)return {k:"closing",label:n===0?"Closes today":`Closes in ${n}d`,rank:0};
-  return {k:"open",label:"Open",rank:2};
+  if(!d.close)return {k:"rolling",label:"No deadline given",rank:2,open:true};
+  const n=Math.round((new Date(d.close+"T00:00:00")-TODAY)/DAY);
+  if(n<0)return {k:"closed",label:"Closed",rank:4,open:false};
+  if(n<=14)return {k:"closing",label:n===0?"Closes today":`Closes in ${n}d`,rank:0,open:true};
+  return {k:"open",label:"Open",rank:1,open:true};
 }
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const initials=s=>s.replace(/[^A-Za-z& ]/g,"").split(/\s+/).filter(Boolean).slice(0,2).map(w=>w[0]).join("").toUpperCase();
 const hue=s=>LOGO[[...s].reduce((a,c)=>a+c.charCodeAt(0),0)%LOGO.length];
-
 const $=id=>document.getElementById(id);
-[...new Set(DATA.map(d=>d.sector))].sort().forEach(v=>$("f-sector").add(new Option(v,v)));
-try{if(localStorage.getItem("manifest.hk.visaClosed")==="1")$("visa").open=false;}catch(e){}
-$("visa").addEventListener("toggle",()=>{try{localStorage.setItem("manifest.hk.visaClosed",$("visa").open?"0":"1")}catch(e){}});
-
-function renderTabs(){
-  $("types").innerHTML=Object.entries(TYPES).map(([k,v])=>{
-    const n=DATA.filter(d=>d.t===k).length;
-    return `<button data-t="${k}" aria-pressed="${state.t===k}">${v}<span class="n">${n}</span></button>`}).join("");
-  $("headline").textContent=`Hong Kong supply chain ${TYPES[state.t].replace("MT","management trainee").toLowerCase()}`;
-}
 
 function render(){
-  renderTabs();
-  const q=$("q").value.trim().toLowerCase(), fs=$("f-status").value, fv=$("f-visa").value, fl=$("f-lang").value, sec=$("f-sector").value, hide=$("f-hide").checked;
-  const base=DATA.filter(d=>d.t===state.t).map(d=>({...d,st:status(d)}));
-  $("st-open").textContent=base.filter(d=>["open","closing","rolling"].includes(d.st.k)).length;
-  $("st-closing").textContent=base.filter(d=>d.st.k==="closing").length;
-  $("st-intl").textContent=base.filter(d=>d.visa==="all"&&d.st.k!=="closed").length;
-  $("st-mine").textContent=Object.keys(progress).length;
+  const all=DATA.map(d=>({...d,st:status(d)}));
+  const showZh=$("f-zh").checked;
+  const inTab=d=>(state.t==="open")===d.st.open;
+  $("types").innerHTML=Object.entries(TABS).map(([k,v])=>{
+    const n=all.filter(d=>((k==="open")===d.st.open)&&(showZh||d.lang!=="zh")).length;
+    return `<button data-t="${k}" aria-pressed="${state.t===k}">${v}<span class="n">${n}</span></button>`}).join("");
+  const openOnes=all.filter(d=>d.st.open&&(showZh||d.lang!=="zh"));
+  $("st-open").textContent=openOnes.length;
+  $("st-closing").textContent=openOnes.filter(d=>d.st.k==="closing").length;
+  $("st-en").textContent=all.filter(d=>d.lang==="en").length;
+  $("st-mine").textContent=Object.values(progress).filter(v=>v&&v!=="watch").length;
 
-  let rows=base.filter(d=>(!q||(d.co+" "+d.prog+" "+d.sector).toLowerCase().includes(q))
-    &&(!fs||d.st.k===fs)&&(!fv||d.visa===fv)&&(!sec||d.sector===sec)
-    &&(!fl||(fl==="en"?d.lang==="E":!d.lang.includes("C")))&&(!hide||d.st.k!=="closed"));
-  const key={co:d=>d.co,prog:d=>d.prog,open:d=>d.open,status:d=>d.st.rank,visa:d=>VISA[d.visa][2],
-    close:d=>d.st.k==="closed"?"9"+d.close:d.close==="rolling"?"8":d.close}[state.sort];
+  const q=$("q").value.trim().toLowerCase(), fl=$("f-lang").value;
+  let rows=all.filter(d=>inTab(d)&&(showZh||d.lang!=="zh")&&(!fl||d.lang===fl)&&(!q||(d.co+" "+d.prog+" "+d.sector).toLowerCase().includes(q)));
+  const key={co:d=>d.co,prog:d=>d.prog,status:d=>d.st.rank,lang:d=>LANG[d.lang][2],close:d=>d.close||"9999"}[state.sort];
   rows.sort((a,b)=>{const x=key(a),y=key(b);return (x<y?-1:x>y?1:0)*state.dir||a.co.localeCompare(b.co)});
-
   document.querySelectorAll("th button").forEach(b=>b.querySelector(".arr").textContent=b.dataset.sort===state.sort?(state.dir>0?"↑":"↓"):"");
   $("empty").hidden=rows.length>0;
   $("rows").innerHTML=rows.map(d=>{
-    const p=progress[d.id]||"", v=VISA[d.visa];
-    const close=d.close==="rolling"?`<span class="date">Rolling<small>until filled</small></span>`:`<span class="date">${fmt(d.close)}</span>`;
-    return `<tr class="${d.st.k==="closed"?"is-closed":""}">
-      <td class="ref">${d.id}</td>
+    const p=progress[d.id]||"", l=LANG[d.lang];
+    return `<tr class="${d.st.open?"":"is-closed"}">
       <td><div class="co"><span class="logo" style="background:${hue(d.co)}">${esc(initials(d.co))}</span><div><b>${esc(d.co)}</b><small>${esc(d.sector)}</small></div></div></td>
-      <td class="prog">${esc(d.prog)}</td>
-      <td><span class="date">${fmt(d.open)}</span></td>
-      <td>${close}</td>
+      <td class="prog">${esc(d.prog)}<small>${esc(d.kind)}</small></td>
+      <td>${d.close?`<span class="date">${fmt(d.close)}</span>`:`<span class="date">Not published</span>`}</td>
       <td><span class="pill s-${d.st.k}">${d.st.label}</span></td>
-      <td><span class="pill ${v[1]}">${v[0]}</span></td>
-      <td class="lang" title="${[...d.lang].map(c=>LANGS[c]).join(", ")}">${[...d.lang].map(c=>LANGS[c].slice(0,c==="M"?4:c==="C"?5:3)).join(" · ")}</td>
-      <td class="docs">${d.cl?"CV + cover letter":"CV only"}</td>
-      <td><div class="tests">${d.tests.map(t=>`<span class="tag">${esc(t)}</span>`).join("")}</div></td>
-      <td><a class="apply" href="${esc(d.url)}" target="_blank" rel="noopener">Careers ↗</a></td>
-      <td><select class="track" id="p-${d.id}" data-id="${d.id}" data-v="${p}" aria-label="My progress for ${esc(d.co)}">${PROGRESS.map(([val,l])=>`<option value="${val}"${val===p?" selected":""}>${l}</option>`).join("")}</select></td>
+      <td><span class="pill ${l[1]}">${l[0]}</span></td>
+      <td class="fit">${esc(d.note)}</td>
+      <td><a class="apply" href="${esc(d.url)}" target="_blank" rel="noopener">Open listing ↗</a><span class="src">${esc(d.src)}</span></td>
+      <td><select class="track" id="p-${d.id}" data-id="${d.id}" data-v="${p}" aria-label="My progress for ${esc(d.co)}">${PROGRESS.map(([val,lab])=>`<option value="${val}"${val===p?" selected":""}>${lab}</option>`).join("")}</select></td>
     </tr>`}).join("");
-  store.set("manifest.hk.view",{t:state.t,sort:state.sort,dir:state.dir});
+  store.set("manifest.hk27.view",{t:state.t,sort:state.sort,dir:state.dir});
 }
 
 $("types").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;state.t=b.dataset.t;history.replaceState(null,"","#"+state.t);render();});
 document.querySelector("thead").addEventListener("click",e=>{const b=e.target.closest("button[data-sort]");if(!b)return;
   if(state.sort===b.dataset.sort)state.dir*=-1;else{state.sort=b.dataset.sort;state.dir=1;}render();});
-["q","f-status","f-visa","f-lang","f-sector","f-hide"].forEach(id=>$(id).addEventListener("input",render));
+["q","f-lang","f-zh"].forEach(id=>$(id).addEventListener("input",render));
 $("rows").addEventListener("change",e=>{const s=e.target.closest(".track");if(!s)return;
   if(s.value)progress[s.dataset.id]=s.value;else delete progress[s.dataset.id];
-  s.dataset.v=s.value;store.set("manifest.hk.progress",progress);$("st-mine").textContent=Object.keys(progress).length;});
-window.addEventListener("hashchange",()=>{const t=location.hash.slice(1);if(TYPES[t]){state.t=t;render();}});
+  s.dataset.v=s.value;store.set("manifest.hk27.progress",progress);render();});
+window.addEventListener("hashchange",()=>{const t=location.hash.slice(1);if(TABS[t]){state.t=t;render();}});
 render();
 </script>
 </body>
