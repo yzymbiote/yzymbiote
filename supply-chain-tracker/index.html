@@ -195,10 +195,10 @@ const DATA = [
  {co:"Swire",sector:"Conglomerate",prog:"Swire Management Programme 2027",kind:"MT · joins late Aug 2027",close:"2026-10-31",lang:"en",
   note:"English required; Putonghua or Cantonese only an advantage. The 2027 window ran 11 Sep to 31 Oct 2026. Expect the 2028 intake to open around September 2027.",
   url:"https://careers.swire.com/en/careers/swire-management-programme",src:"careers.swire.com · verified 24 Nov"},
- {co:"Cathay Pacific",sector:"Aviation",prog:"Cargo Graduate Trainee Programme",kind:"Graduate trainee",close:"2026-11-15",lang:"unk",
+ {co:"Cathay Pacific",mine:"applied",sector:"Aviation",prog:"Cargo Graduate Trainee Programme",kind:"Graduate trainee",close:"2026-11-15",lang:"unk",
   note:"Cathay's page says 2027 applications are closed and the 2028 intake opens in September. Join their Talent Community on the page for updates.",
   url:"https://careers.cathaypacific.com/en/careers/our-teams/early-careers-students-and-graduates/graduate-trainee",src:"careers.cathaypacific.com · verified 24 Nov"},
- {co:"MTR Corporation",sector:"Infrastructure",prog:"Graduate development programmes (incl. procurement & supply chain)",kind:"Graduate programmes",close:"2026-10-27",lang:"unk",
+ {co:"MTR Corporation",mine:"applied",sector:"Infrastructure",prog:"Graduate development programmes (incl. procurement & supply chain)",kind:"Graduate programmes",close:"2026-10-27",lang:"unk",
   note:"MTR's page says 2027 intake applications are closed. Leave your email there for the next cycle. Several MTR streams require Chinese including Putonghua.",
   url:"https://www.mtr.com.hk/graduate-development-programme/index.php",src:"mtr.com.hk · verified 24 Nov"},
 ];
@@ -214,6 +214,7 @@ DATA.forEach(d=>{d.id=(d.co+"|"+d.prog).replace(/\W+/g,"-").toLowerCase();});
 
 const store={get(k,f){try{const v=localStorage.getItem(k);return v==null?f:JSON.parse(v)}catch(e){return f}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
 let progress=store.get("manifest.hk27.progress",{});
+DATA.forEach(d=>{if(d.mine&&!(d.id in progress))progress[d.id]=d.mine;});
 let state=Object.assign({t:"open",sort:"close",dir:1},store.get("manifest.hk27.view",{}));
 if(TABS[location.hash.slice(1)])state.t=location.hash.slice(1);
 
@@ -269,7 +270,7 @@ document.querySelector("thead").addEventListener("click",e=>{const b=e.target.cl
   if(state.sort===b.dataset.sort)state.dir*=-1;else{state.sort=b.dataset.sort;state.dir=1;}render();});
 ["q","f-lang"].forEach(id=>$(id).addEventListener("input",render));
 $("rows").addEventListener("change",e=>{const s=e.target.closest(".track");if(!s)return;
-  if(s.value)progress[s.dataset.id]=s.value;else delete progress[s.dataset.id];
+  progress[s.dataset.id]=s.value;
   s.dataset.v=s.value;store.set("manifest.hk27.progress",progress);render();});
 window.addEventListener("hashchange",()=>{const t=location.hash.slice(1);if(TABS[t]){state.t=t;render();}});
 render();
