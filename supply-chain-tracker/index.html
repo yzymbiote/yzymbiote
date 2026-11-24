@@ -134,7 +134,7 @@ footer{padding-block:28px 40px;color:var(--muted);font-size:12px;display:grid;ga
   <section class="intro">
     <span class="eyebrow">Every link opened and checked · 24 Nov 2026</span>
     <h1 id="headline">Hong Kong supply chain programmes for 2027 graduates</h1>
-    <p>Graduate, management trainee and entry-level programmes in logistics, shipping, aviation cargo and supply chain. Only listings whose pages were opened and read are included. Each is tagged by language requirement, so you can skip roles that need Cantonese or Mandarin.</p>
+    <p>Graduate, management trainee and entry-level programmes in logistics, shipping, aviation cargo and supply chain. Only listings whose pages were opened and read are included. Each is tagged by language requirement. Roles that require Cantonese or Mandarin are left out entirely.</p>
   </section>
 
   <div class="tip"><b>Missed a deadline? You can apply next cycle.</b><span>Swire and Cathay open their 2028 intakes around September 2027 and close in October or November. Many schemes also accept recent graduates, so check the eligibility on each page when it opens.</span></div>
@@ -154,7 +154,6 @@ footer{padding-block:28px 40px;color:var(--muted);font-size:12px;display:grid;ga
       <option value="">Any language result</option><option value="en">English only (confirmed)</option>
       <option value="pref">English required, Chinese a plus</option><option value="unk">Not stated</option>
     </select>
-    <label class="chk"><input id="f-zh" type="checkbox"> Show roles that require Chinese</label>
   </section>
 
   <p class="note"><i>!</i><span>Deadlines and language requirements are quoted from each employer's own page as it read on 24 Nov 2026. "Not stated" means the page didn't say. Pages change, so recheck before you apply.</span></p>
@@ -172,7 +171,7 @@ footer{padding-block:28px 40px;color:var(--muted);font-size:12px;display:grid;ga
       </tr></thead>
       <tbody id="rows"></tbody>
     </table>
-    <div class="empty" id="empty" hidden>No programmes match. Try "Show roles that require Chinese" or the other tab.</div>
+    <div class="empty" id="empty" hidden>No programmes match. Clear the search or try the other tab.</div>
   </div>
 
   <footer>
@@ -192,12 +191,6 @@ const DATA = [
  {co:"Lalamove",sector:"Delivery tech",prog:"Global Trainee Program 2027",kind:"Rotational · Hong Kong based, 18 markets",close:"2026-12-31",lang:"pref",
   note:"Application period 23 Sep to 31 Dec 2026. Requires strong English; Chinese is 'highly preferred'. Based in Hong Kong, with work across overseas and Mainland operations.",
   url:"https://www.lalamove.com/global-trainee-program",src:"lalamove.com · verified 24 Nov"},
- {co:"DHL Global Forwarding",sector:"Freight forwarding",prog:"Management Trainee Program 2027",kind:"3-yr MT · starts Jul 2027",close:"2026-12-06",lang:"zh",
-  note:"Supply chain management programme. The listing requires good spoken and written English and Chinese, plus willingness to relocate to Mainland China or abroad.",
-  url:"https://careers.dhl.com/global/en/job/DPDHGLOBALAV390905ENGLOBALEXTERNAL/Management-Trainee-Program-2027",src:"careers.dhl.com · verified 24 Nov"},
- {co:"DKSH",sector:"Distribution",prog:"Management Trainee Program – Supply Chain stream",kind:"MT · deadline each March",close:null,lang:"zh",
-  note:"Requires fluency in English, Cantonese and Mandarin.",
-  url:"https://www.dksh.com/hk-en/home/careers/workplace-locations/hong-kong/management-trainee-program",src:"dksh.com · verified 24 Nov"},
  // Closed for the 2027 intake (confirmed on the employer's page). Watch for the 2028 cycle.
  {co:"Swire",sector:"Conglomerate",prog:"Swire Management Programme 2027",kind:"MT · joins late Aug 2027",close:"2026-10-31",lang:"en",
   note:"English required; Putonghua or Cantonese only an advantage. The 2027 window ran 11 Sep to 31 Oct 2026. Expect the 2028 intake to open around September 2027.",
@@ -239,7 +232,7 @@ const $=id=>document.getElementById(id);
 
 function render(){
   const all=DATA.map(d=>({...d,st:status(d)}));
-  const showZh=$("f-zh").checked;
+  const showZh=false;
   const inTab=d=>(state.t==="open")===d.st.open;
   $("types").innerHTML=Object.entries(TABS).map(([k,v])=>{
     const n=all.filter(d=>((k==="open")===d.st.open)&&(showZh||d.lang!=="zh")).length;
@@ -274,7 +267,7 @@ function render(){
 $("types").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;state.t=b.dataset.t;history.replaceState(null,"","#"+state.t);render();});
 document.querySelector("thead").addEventListener("click",e=>{const b=e.target.closest("button[data-sort]");if(!b)return;
   if(state.sort===b.dataset.sort)state.dir*=-1;else{state.sort=b.dataset.sort;state.dir=1;}render();});
-["q","f-lang","f-zh"].forEach(id=>$(id).addEventListener("input",render));
+["q","f-lang"].forEach(id=>$(id).addEventListener("input",render));
 $("rows").addEventListener("change",e=>{const s=e.target.closest(".track");if(!s)return;
   if(s.value)progress[s.dataset.id]=s.value;else delete progress[s.dataset.id];
   s.dataset.v=s.value;store.set("manifest.hk27.progress",progress);render();});
