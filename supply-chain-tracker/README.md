@@ -8,4 +8,4 @@ A tracker of real graduate, management trainee and entry-level supply chain prog
 
 Open `index.html` in a browser; there's no build step. To add a programme, add a row to the `DATA` array near the bottom of the file.
 
-Deadlines and language requirements come from employer careers pages where possible, otherwise from job boards and university career sites. Confirm on the listing before applying.
+Every listing was opened and read on 24 Nov 2026; deadlines and language requirements are quoted from the employer's own page. Recheck before applying.

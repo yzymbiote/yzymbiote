@@ -132,12 +132,12 @@ footer{padding-block:28px 40px;color:var(--muted);font-size:12px;display:grid;ga
 
 <main class="wrap">
   <section class="intro">
-    <span class="eyebrow">Real listings · checked 24 Nov 2026</span>
+    <span class="eyebrow">Every link opened and checked · 24 Nov 2026</span>
     <h1 id="headline">Hong Kong supply chain programmes for 2027 graduates</h1>
-    <p>Graduate, management trainee and entry-level programmes in logistics, shipping, aviation cargo and supply chain. Each one is sourced from the employer or a job board and tagged by language requirement, so you can skip roles that need Cantonese or Mandarin.</p>
+    <p>Graduate, management trainee and entry-level programmes in logistics, shipping, aviation cargo and supply chain. Only listings whose pages were opened and read are included. Each is tagged by language requirement, so you can skip roles that need Cantonese or Mandarin.</p>
   </section>
 
-  <div class="tip"><b>Missed a deadline? You can apply next cycle.</b><span>Swire, Cathay and similar schemes accept graduates for up to two years after they finish. If you graduate in 2027, you can still apply to the 2028 intake, which usually opens in September and closes in October or November 2027.</span></div>
+  <div class="tip"><b>Missed a deadline? You can apply next cycle.</b><span>Swire and Cathay open their 2028 intakes around September 2027 and close in October or November. Many schemes also accept recent graduates, so check the eligibility on each page when it opens.</span></div>
 
   <nav class="types" id="types" aria-label="Listing status"></nav>
 
@@ -157,7 +157,7 @@ footer{padding-block:28px 40px;color:var(--muted);font-size:12px;display:grid;ga
     <label class="chk"><input id="f-zh" type="checkbox"> Show roles that require Chinese</label>
   </section>
 
-  <p class="note"><i>!</i><span>Deadlines and language requirements come from each employer's careers page where possible, otherwise from job boards and university career sites. "Not stated" means no source said either way. Check the listing before you apply.</span></p>
+  <p class="note"><i>!</i><span>Deadlines and language requirements are quoted from each employer's own page as it read on 24 Nov 2026. "Not stated" means the page didn't say. Pages change, so recheck before you apply.</span></p>
 
   <div class="tablebox">
     <table>
@@ -186,49 +186,28 @@ footer{padding-block:28px 40px;color:var(--muted);font-size:12px;display:grid;ga
  close: YYYY-MM-DD, or null when no deadline was published
  lang: en = English only confirmed · pref = English required, Chinese preferred · unk = not stated · zh = Chinese required */
 const DATA = [
- {co:"Airport Authority HK",sector:"Aviation",prog:"Management Trainee Programme",kind:"3-yr MT · starts Jul 2027",close:"2026-11-30",lang:"unk",
-  note:"Rotations through airport departments. Final-year students of any discipline and graduates with under 3 years' experience can apply.",
-  url:"https://www.hongkongairport.com/en/careers/programmes/management-trainee.page",src:"hongkongairport.com"},
+ {co:"Airport Authority HK",sector:"Aviation",prog:"Management Trainee Programme",kind:"3-yr MT · starts Jul 2027",close:"2026-11-30",lang:"en",
+  note:"Requires excellent written and spoken English; Cantonese or Putonghua is listed only as an advantage. Online assessment in Dec, assessment centre and final interview in Mar 2027.",
+  url:"https://www.hongkongairport.com/en/careers/programmes/management-trainee.page",src:"hongkongairport.com · verified 24 Nov"},
+ {co:"Lalamove",sector:"Delivery tech",prog:"Global Trainee Program 2027",kind:"Rotational · Hong Kong based, 18 markets",close:"2026-12-31",lang:"pref",
+  note:"Application period 23 Sep to 31 Dec 2026. Requires strong English; Chinese is 'highly preferred'. Based in Hong Kong, with work across overseas and Mainland operations.",
+  url:"https://www.lalamove.com/global-trainee-program",src:"lalamove.com · verified 24 Nov"},
  {co:"DHL Global Forwarding",sector:"Freight forwarding",prog:"Management Trainee Program 2027",kind:"3-yr MT · starts Jul 2027",close:"2026-12-06",lang:"zh",
-  note:"Supply chain management rotation. Listings ask for good spoken and written English and Chinese, plus willingness to relocate to Mainland China.",
-  url:"https://careers.dhl.com/global/en/job/DPDHGLOBALAV390905ENGLOBALEXTERNAL/Management-Trainee-Program-2027",src:"careers.dhl.com"},
- {co:"OOCL",sector:"Shipping",prog:"Management Trainee 2027",kind:"3-yr MT · starts mid-2027",close:"2026-12-31",lang:"unk",
-  note:"Container shipping line. Job rotations and fast-track development. OOCL says it welcomes candidates from all backgrounds; language rules aren't published.",
-  url:"https://www.oocl.com/eng/aboutoocl/ooclcareer/careersatoocl/Documents/Career/index.aspx",src:"oocl.com"},
- {co:"Lalamove",sector:"Delivery tech",prog:"Global Trainee Program 2027",kind:"Rotational · multi-market",close:"2026-12-31",lang:"pref",
-  note:"Logistics operations across up to 18 markets. English and analytical skills required, Chinese highly preferred. You must be willing to relocate between markets.",
-  url:"https://www.lalamove.com/global-trainee-program",src:"lalamove.com"},
- {co:"MUJI Hong Kong",sector:"Retail",prog:"Management Trainee Program 2027",kind:"18-month MT · starts late Jul 2027",close:"2026-12-31",lang:"unk",
-  note:"Retail operations rather than pure supply chain: frontline to head office rotation. Online assessment in Jan 2027, offers in Apr 2027.",
-  url:"https://osa-career.hksyu.edu/2026/11/03/muji-hong-kong-recruitment-talk/",src:"HKSYU careers"},
- {co:"BNP Paribas",sector:"Banking",prog:"2027 APAC Graduate Programme – Transaction Banking, Supply Chain Management",kind:"2-yr grad · Jan/Apr/Jul 2027",close:null,lang:"en",
-  note:"Supply chain finance, not operations. Fluent English required; other languages a plus. Minimum GPA 3.3/4.0. No deadline published, so apply soon.",
-  url:"https://group.bnpparibas/en/careers/job-offer/2027-apac-graduate-programme-transaction-banking-supply-chain-management-hong-kong",src:"group.bnpparibas"},
- {co:"SF Supply Chain",sector:"Logistics",prog:"Elite Management Trainee Program / Logistics Coordinator (fresh grads)",kind:"2-yr MT or entry-level",close:null,lang:"unk",
-  note:"Contract logistics in Tsing Yi. Also hiring Control Tower Officers. No 2027 deadline published; check the open listings.",
-  url:"https://hk.jobsdb.com/companies/sf-supply-chain-171089088278968/graduates",src:"JobsDB"},
- {co:"DKSH",sector:"Distribution",prog:"Management Trainee Program – Supply Chain stream",kind:"18-month MT · starts Jul",close:null,lang:"zh",
-  note:"Requires fluent English, Cantonese and Mandarin. Applications usually close in March.",
-  url:"https://www.dksh.com/hk-en/home/careers/workplace-locations/hong-kong/management-trainee-program",src:"dksh.com"},
- // Closed for the 2027 intake. Watch these for the 2028 cycle.
- {co:"Swire",sector:"Conglomerate",prog:"Swire Management Programme 2027",kind:"MT · starts Aug 2027",close:"2026-10-31",lang:"en",
-  note:"English is the only language requirement, and Swire says non-Chinese speakers are welcome. Starting salary HK$32,300 a month. Opens again around September 2027.",
-  url:"https://careers.swire.com/en/careers/swire-management-programme",src:"careers.swire.com"},
- {co:"Cathay Pacific",sector:"Aviation",prog:"2027 Cargo Graduate Trainee Programme",kind:"Grad · starts Aug 2027",close:"2026-11-15",lang:"en",
-  note:"Hong Kong streams require excellent English only. Open to graduates within 2 years of graduating, so you can apply to the 2028 intake. There's also a Supply Chain & Asset Management stream.",
-  url:"https://careers.cathaypacific.com/en/careers/our-teams/early-careers-students-and-graduates/graduate-trainee",src:"careers.cathaypacific.com"},
- {co:"MTR Corporation",sector:"Infrastructure",prog:"Procurement & Supply Chain Associate (2027 intake)",kind:"Grad programme",close:"2026-10-27",lang:"unk",
-  note:"For supply chain, procurement and business graduates. Applications ran 15 Sep to 27 Oct 2026. Leave your email on MTR's page to hear when the next cycle opens.",
-  url:"https://www.mtr.com.hk/graduate-development-programme/index.php",src:"mtr.com.hk"},
- {co:"HAECO",sector:"Aviation",prog:"Group Graduate Trainee Programme 2027",kind:"Grad · rotational",close:"2026-11-15",lang:"unk",
-  note:"Aircraft maintenance (MRO) group. No dedicated supply chain track found.",
-  url:"https://careers.haeco.com/job/Airport-area-HAECO-Group-Graduate-Trainee-Programme-2027-(Hong-Kong)/1366966666/",src:"careers.haeco.com"},
- {co:"HKTVmall",sector:"E-commerce",prog:"Management Trainee 2027",kind:"24-month MT · HK$32,000/mo",close:"2026-10-31",lang:"unk",
-  note:"Cross-functional rotations. No confirmed supply chain stream.",
-  url:"https://hktvcareers.com/programmes/",src:"hktvcareers.com"},
- {co:"Swire Coca-Cola HK",sector:"FMCG",prog:"Graduate Trainee Program (Supply Chain stream)",kind:"3-yr GT",close:"2026-04-30",lang:"unk",
-  note:"Supply chain is one of four rotation streams. This cycle closed in April, much earlier than most, so watch for the next intake from early 2027.",
-  url:"https://www.hk.swirecocacola.com/people/en/talent-development/scchk-trainee-program/",src:"hk.swirecocacola.com"},
+  note:"Supply chain management programme. The listing requires good spoken and written English and Chinese, plus willingness to relocate to Mainland China or abroad.",
+  url:"https://careers.dhl.com/global/en/job/DPDHGLOBALAV390905ENGLOBALEXTERNAL/Management-Trainee-Program-2027",src:"careers.dhl.com · verified 24 Nov"},
+ {co:"DKSH",sector:"Distribution",prog:"Management Trainee Program – Supply Chain stream",kind:"MT · deadline each March",close:null,lang:"zh",
+  note:"Requires fluency in English, Cantonese and Mandarin.",
+  url:"https://www.dksh.com/hk-en/home/careers/workplace-locations/hong-kong/management-trainee-program",src:"dksh.com · verified 24 Nov"},
+ // Closed for the 2027 intake (confirmed on the employer's page). Watch for the 2028 cycle.
+ {co:"Swire",sector:"Conglomerate",prog:"Swire Management Programme 2027",kind:"MT · joins late Aug 2027",close:"2026-10-31",lang:"en",
+  note:"English required; Putonghua or Cantonese only an advantage. The 2027 window ran 11 Sep to 31 Oct 2026. Expect the 2028 intake to open around September 2027.",
+  url:"https://careers.swire.com/en/careers/swire-management-programme",src:"careers.swire.com · verified 24 Nov"},
+ {co:"Cathay Pacific",sector:"Aviation",prog:"Cargo Graduate Trainee Programme",kind:"Graduate trainee",close:"2026-11-15",lang:"unk",
+  note:"Cathay's page says 2027 applications are closed and the 2028 intake opens in September. Join their Talent Community on the page for updates.",
+  url:"https://careers.cathaypacific.com/en/careers/our-teams/early-careers-students-and-graduates/graduate-trainee",src:"careers.cathaypacific.com · verified 24 Nov"},
+ {co:"MTR Corporation",sector:"Infrastructure",prog:"Graduate development programmes (incl. procurement & supply chain)",kind:"Graduate programmes",close:"2026-10-27",lang:"unk",
+  note:"MTR's page says 2027 intake applications are closed. Leave your email there for the next cycle. Several MTR streams require Chinese including Putonghua.",
+  url:"https://www.mtr.com.hk/graduate-development-programme/index.php",src:"mtr.com.hk · verified 24 Nov"},
 ];
 
 const TABS={open:"Open now",closed:"Closed: reapply next cycle"};
