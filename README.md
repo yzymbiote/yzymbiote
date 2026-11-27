@@ -6,7 +6,7 @@ I build tools and simulations for operations and supply chain problems. My curre
 
 ## Projects
 
-**[Ripple](https://yzymbiote.github.io/Ripple/)**: a live tracker of disruptions in critical tech supply chains. It reads company filings and the news daily, maps who supplies whom across 64 companies (every link backed by a filing quote), traces each event to the companies it hits, and scores those calls against share prices. Includes a pixel-art world view and a "what if" simulator.
+**[Ripple](https://ripple-d17.pages.dev/)** ([overview](https://github.com/yzymbiote/Ripple-Web)): a live tracker of disruptions in critical tech supply chains. It reads company filings and the news daily, maps who supplies whom across 64 companies (every link backed by a filing quote), traces each event to the companies it hits, and scores those calls against share prices. Includes a pixel-art world view and a "what if" simulator.
 `Python` `SQLite` `JavaScript` `GitHub Actions`
 
 **[Keep It Walking](https://yzymbiote.github.io/keep-it-walking)**: a browser game where a robot's body is the AI supply chain (chips, memory, power). Real 2026 supply shocks damage the matching part; keep it walking for 52 weeks without overspending.
